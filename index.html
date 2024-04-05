@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet"> 
     <title>ToDoList</title>
 </head>
-<body>
+<body class="flex justify-center items-center h-screen">
     <!-- title -->
+    <div class="bg-red-200 border-4 w-64 h-64 justify-center items-center">
     <div>
-        <h1 id="title">To do List + </h1>
+        <h1 id="title" class="text-2xl font-bold p-5 ">To do List + </h1>
     </div>
-
     <div>
-        <label id="addTodo">
+        <label id="addTodo" class="">
             Add new Todo
         </label>
         <button id="button">Add</button>
     </div>
 
     <div id="TodoList">
-        <label>list</label>
-        <button>🗑</button>
-
-        <label>list</label>
-        <button>🗑</button>
-
-        <label>list</label>
-        <button>🗑</button>
+        <ul>
+            <li>
+                <label>list</label>
+                <button>🗑</button>
+            </li>
+            <li>
+                    <label>list</label>
+                    <button>🗑</button>
+            </li>
+                <li>
+                    <label>list</label>
+                    <button>🗑</button>
+                </li>
+        </ul>
+    </div>
     </div>
 
     <script src="/script.js"></script>
