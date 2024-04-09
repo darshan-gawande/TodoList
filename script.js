@@ -1,5 +1,8 @@
+
+
 const input = document.getElementById("input");
 const listContainer = document.getElementById("todoList");
+
 
 
 function addTask() {
@@ -9,11 +12,29 @@ function addTask() {
         const list = document.createElement("li");
         list.innerHTML = input.value;
         listContainer.appendChild(list);
-
-        const span = document.createElement("span");
+        list.classList.add("p-2","m-2", "font-medium");
+       
+         span = document.createElement("span");
          span.innerHTML = "🗑";
         list.appendChild(span);
-        list.classList.add("float-right","cursor-pointer","item-center");
+        span.classList.add("cursor-pointer");
+
+        span.addEventListener("click", () => {
+        list.remove();
+    })
     }
+    input.value = "";
+    saveData();
+};
+
+function saveData() {
+    localStorage.setItem("data", listContainer.innerHTML);
+};
+
+function showData() {
+    listContainer.innerHTML = localStorage.getItem("data");
 }
+
+// showData();
+
 
